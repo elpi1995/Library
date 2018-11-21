@@ -2,33 +2,32 @@ package com.cognizant.library;
 
 import org.apache.commons.lang3.StringUtils;
 
-public class Books {
+public class Books extends Items{
 	private static int numOfBooks = 0;
-	private String title;
 	private String author;
 	private String publisher;
 	private int edition;
-	private String month;
-	private int year;
 	private String ISBN;
 	private String bID = "B"+StringUtils.leftPad(""+numOfBooks,4,"0");
-	Books(String title, String author, String publisher, int edition,String month,  int year, String ISBN){
-		this.title = title;
+	Books(String title,String month,  int year, String author, String publisher, int edition, String ISBN){
+		super(title, month,year);
 		this.author = author;
 		this.publisher = publisher;
 		this.edition = edition;
-		this.month = month;
-		this.year = year;
 		this.ISBN = ISBN;
 		numOfBooks++;
+	}
+	String type() {
+		return "Book";
+	}
+	String id() {
+		return "I"+bID;
 	}
 	//Getters
 	public static int getNumOfBooks() {
 		return numOfBooks;
 	}
-	public String getTitle() {
-		return this.title;
-	}
+	
 	public String getAuthor() {
 		return this.author;
 	}
@@ -38,7 +37,10 @@ public class Books {
 	public int getEdition() {
 		return this.edition;
 	}
-	public int getYear() {
-		return this.year;
+	public String getISBN() {
+		return this.ISBN;
+	}
+	public String getBID() {
+		return this.bID;
 	}
 }
