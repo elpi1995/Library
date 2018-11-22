@@ -48,7 +48,22 @@ public class Journals extends Items{
 		public String getJID() {
 			return this.jID;
 		}
-	
+	//Setters
+		public void setSubType(String subType) {
+			this.subType=subType;
+		}
+		public void setPublication(String publication) {
+			this.publication=publication;
+		}
+		public void setDay(String day) {
+			this.day=day;
+		}
+		public void setEdition(int edition) {
+			this.edition=edition;
+		}
+		public void setISSN(String ISSN) {
+			this.ISSN=ISSN;
+		}
 	
 	
 }

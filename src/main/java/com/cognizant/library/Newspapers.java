@@ -25,24 +25,36 @@ public class Newspapers extends Items{
 		return "I"+nID;
 	}
 	//Getters
-			public static int getNumOfPapars() {
-				return numOfPapers;
-			}
-			
-			public String getSubType() {
-				return this.editor;
-			}
-			public String getPublication() {
-				return this.publication;
-			}
-			public String getEditor() {
-				return this.editor;
-			}
-			public String getDay() {
-				return this.day;
-			}
-			public String getNID() {
-				return this.nID;
-			}
-		
+	public static int getNumOfPapars() {
+		return numOfPapers;
+	}
+	
+	public String getPublication() {
+		return this.publication;
+	}
+	public String getEditor() {
+		return this.editor;
+	}
+	public String getDay() {
+		return this.day;
+	}
+	public String getCountry() {
+		return this.country;
+	}
+	public String getNID() {
+		return this.nID;
+	}
+	//Setters
+	public void setPublication(String publication) {
+		this.publication=publication;
+	}
+	public void setEditor(String editor) {
+		this.editor= editor;
+	}
+	public void setDay(String day) {
+		this.day=day;
+	}
+	public void setCountry(String country) {
+		this.country=country;
+	}
 }

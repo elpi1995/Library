@@ -43,4 +43,17 @@ public class Books extends Items{
 	public String getBID() {
 		return this.bID;
 	}
+	//Setters
+	public void setAuthor(String author) {
+		this.author = author;
+	}
+	public void setPublisher(String publisher) {
+		this.publisher = publisher;
+	}
+	public void setEdition(int edition) {
+		this.edition =edition;
+	}
+	public void setISBN(String ISBN) {
+		this.ISBN=ISBN;
+	}
 }
